@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+-(IBAction)dismissKeyboard :(id)sender;
 
 @end
 
@@ -17,12 +20,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.textField becomeFirstResponder];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
+-(IBAction)dismissKeyboard :(id)sender
+{
+    [self.textField resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    
     // Dispose of any resources that can be recreated.
 }
 
