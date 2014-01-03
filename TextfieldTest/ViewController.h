@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>//채택한 프로토콜이 있으므로 따로 선언하지 않아도 실행한다.
+
+
 
 @end
